@@ -1,17 +1,23 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation } from "swiper";
+import SwiperCore, { Navigation , Autoplay } from "swiper";
 
 import SLIDE_DATA from "../../assets/data/slider.data";
 
 import "./home-header-slider.style.scss";
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation , Autoplay]);
 
 const HomeHeaderSlider = () => {
   const params = {
     slidesPerView: 1,
     navigation: true,
+    loop:true,
+    autoplay:{
+      delay:4000,
+      disableOnInteraction:false,
+    }
+
   };
 
   return (

@@ -53,7 +53,8 @@
 }
 
 // Home Category Swiper
-.category-slider {
+.category-slider,
+.event-list-slider {
   position: relative;
 
   a {
@@ -63,10 +64,11 @@
     }
   }
 
-  .category-slider-header-area {
+  .category-slider-header-area,
+  .event-list-slider-header-area {
     position: relative;
   }
-  
+
   .swipper-button-container {
     display: flex;
     gap: 20px;
@@ -75,10 +77,10 @@
     align-items: center;
     right: 0;
     cursor: pointer;
-  
-    i{
+
+    i {
       display: block;
-      background-color:unset;
+      background-color: unset;
       border: 1px solid #e3e3e3;
       color: $theme-color;
       font-weight: bold;
@@ -86,7 +88,6 @@
       border-radius: 50px;
     }
   }
-  
 
   .category-slider-subheader {
     color: #acacac;
@@ -115,6 +116,82 @@
       color: black;
       & > h5 {
         transition: 0.3s ease-in-out 0s;
+      }
+    }
+  }
+}
+
+// Home Event Swiper
+
+.event-list-slider {
+  a {
+    text-decoration: none;
+    &:hover h5 {
+      color: $theme-color;
+    }
+  }
+  .event-slider-content {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #dce5eb;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba($color: #0e567c, $alpha: 0.16);
+    height: 400px;
+    overflow: hidden;
+    .event-name {
+      display: block;
+      margin: 20px 0 5px;
+      h5 {
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+
+    .event-date {
+      color: #99a3ad;
+      p {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 30px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+
+    .event-slider-thumbnail {
+      overflow: hidden;
+      border-radius: 10px;
+      width: 100%;
+      display: block;
+      height: 200px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .event-introduce{
+      display: block;
+      padding: 10px 0;
+    }
+
+    .event-location{
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+
+      span{
+        display: block;
+        background-color: $theme-color;
+        padding: 2px 10px;
+        font-size: 13px;
+        font-weight: 300;
+        border-radius: 30px;
       }
     }
   }
