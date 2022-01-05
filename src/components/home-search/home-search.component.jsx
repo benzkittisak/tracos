@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import PROVINCE_DATA from "../../data/province.data";
+import PROVINCE_DATA from '../../assets/data/province.data';
 
 // import "./home-search.style.scss";
 

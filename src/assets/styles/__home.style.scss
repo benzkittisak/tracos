@@ -51,3 +51,71 @@
     }
   }
 }
+
+// Home Category Swiper
+.category-slider {
+  position: relative;
+
+  a {
+    text-decoration: none;
+    &:hover h5 {
+      color: $theme-color;
+    }
+  }
+
+  .category-slider-header-area {
+    position: relative;
+  }
+  
+  .swipper-button-container {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    align-items: center;
+    right: 0;
+    cursor: pointer;
+  
+    i{
+      display: block;
+      background-color:unset;
+      border: 1px solid #e3e3e3;
+      color: $theme-color;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 50px;
+    }
+  }
+  
+
+  .category-slider-subheader {
+    color: #acacac;
+    font-weight: 400;
+  }
+
+  .category-slider-content {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #dce5eb;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba($color: #0e567c, $alpha: 0.16);
+
+    .category-slider-content-icon {
+      i {
+        color: $theme-color;
+        padding: 40px 0 25px;
+        font-size: 32px;
+      }
+    }
+    .category-slider-content-title {
+      padding-bottom: 20px;
+      position: relative;
+      display: block;
+      color: black;
+      & > h5 {
+        transition: 0.3s ease-in-out 0s;
+      }
+    }
+  }
+}

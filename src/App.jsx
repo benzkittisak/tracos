@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home/home.component";
 
 // Components
-import Header from "./assets/components/header/header.component";
+import Header from "./components/header/header.component";
 
 import "./assets/styles/global.style.scss";
 import "swiper/css/bundle";

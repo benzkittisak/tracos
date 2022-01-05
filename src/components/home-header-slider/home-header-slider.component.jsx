@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 
-import SLIDE_DATA from "../../data/slider.data";
+import SLIDE_DATA from "../../assets/data/slider.data";
 
 import "./home-header-slider.style.scss";
 

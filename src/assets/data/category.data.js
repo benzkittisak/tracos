@@ -22,7 +22,7 @@ const CATEGORY_DATA = [
     },
     {
         id:4,
-        icon:'fad fa-bad-alt',
+        icon:'fad fa-bed-alt',
         name:'โรงแรม',
         cate_code:'ACCOMMODATION',
         url:'/accommondation'
