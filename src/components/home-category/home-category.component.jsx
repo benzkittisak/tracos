@@ -25,11 +25,11 @@ const HomeCategorySlider = () => {
   return (
     <div className="category-slider">
       <div className="category-slider-header-area">
-        <TitleSection header={"เลือกดูตามประเภทสินค้า"}>
+        <TitleSection header={"เลือกดูตามประเภท"}>
           คุณสามารถเลือกดูสถานที่ต่าง ๆ
           ที่คุณต้องการจากประเภทของสถานที่ที่คุณต้องการ
         </TitleSection>
-        
+
         <div className="swipper-button-container">
           <div className="swiper-category-button-prev">
             <i className="fal fa-arrow-left"></i>
