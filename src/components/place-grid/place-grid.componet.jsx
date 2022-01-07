@@ -19,7 +19,9 @@ const PlaceGrid = ({ data }) => {
           <div className="col-md-4 mb-3" key={place_id}>
             <div className="place-container">
               <div className="place-image">
-                <img src={thumbnail_url} alt="" />
+                <Link to={process.env.PUBLIC_URL + "/place/" + place_id}>
+                  <img src={thumbnail_url} alt="" />
+                </Link>
               </div>
               <div className="place-content">
                 <div className="place-category">
