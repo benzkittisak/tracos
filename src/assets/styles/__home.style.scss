@@ -54,6 +54,7 @@
 
 // Home Category Swiper
 .category-slider,
+.recommanded-slider,
 .event-list-slider {
   position: relative;
 
@@ -65,7 +66,8 @@
   }
 
   .category-slider-header-area,
-  .event-list-slider-header-area {
+  .event-list-slider-header-area,
+  .recommanded-slider-header{
     position: relative;
   }
 
@@ -192,6 +194,93 @@
         font-size: 13px;
         font-weight: 300;
         border-radius: 30px;
+      }
+    }
+  }
+}
+
+
+// Home Recommanded Swiper
+.recommanded-slider-container {
+  position: relative;
+  margin: 0 auto;
+  line-height: 0;
+}
+.recommanded-slider-content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 20px;
+
+  .recommanded-slider-img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 40%;
+    overflow: hidden;
+
+    img {
+      border-radius: 20px;
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+    }
+  }
+  .recommanded-slider-text-section {
+    position: relative;
+    padding: 10px;
+
+    .recommand-date{
+      color:$theme-color;
+      padding-bottom:24px;
+      display: block;
+    }
+
+    .recommand-title{
+      display: block;
+      position: relative;
+      h1{
+        font-size: 32px;
+        padding: 20px 0;
+        width: 400px;
+        font-weight: bold;
+      }
+    }
+    .recommand-introduction{
+      display: block;
+      bottom: 0;
+      margin: 100px 0 10px;
+
+      h4{
+        color: #333;
+        font-size: 24px;
+        padding: 20px 0;
+      }
+      p{
+        margin: 10px 0;
+        color: #acacac;
+        font-weight: lighter;
+      }
+    }
+
+    .recommand-readmore{
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+      padding: 30px 0;
+      margin-top: 30px;
+      a {
+        color: white;
+        background-color: $theme-color;
+        padding: 15px 40px;
+        text-decoration: none;
+        border-radius: 50px;
+
+        transition: 0.3s ease-in-out 0s;
+         &:hover{
+           background-color: $hover-color;
+         }
       }
     }
   }

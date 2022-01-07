@@ -44,7 +44,7 @@ const HomeCategorySlider = () => {
         <Swiper {...params}>
           {CATEGORY_DATA.map(({ id, icon, name, url }) => (
             <SwiperSlide key={id}>
-              <Link to={process.env.PUBLIC_URL + url}>
+              <Link to={process.env.PUBLIC_URL + '/travel?search=' + url}>
                 <div className="category-slider-content">
                   <div className="category-slider-content-icon">
                     <i className={icon}></i>

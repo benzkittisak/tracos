@@ -41,7 +41,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-lg-3">
+          {/* <div className="col-md-6 col-lg-3">
             <div className="header-sign-in-sign-up-container">
               <ul>
                 <li>
@@ -56,7 +56,7 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

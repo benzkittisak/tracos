@@ -2,34 +2,26 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Lazy , Mousewheel ,Autoplay } from "swiper";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 import TitleSection from "../../components/title-section/title-section.componet";
+
+import {getEventList} from '../../tat.api';
 
 SwiperCore.use([Navigation, Lazy , Mousewheel , Autoplay]);
 
 const HomeEventSlider = () => {
-  const [eventData, setEventData] = useState([{}]);
+  const [eventData, setEventData] = useState([]);
 
   useEffect(() => {
-    axios({
-      method: "GET",
-      url: "https://tatapi.tourismthailand.org/tatapi/v5/events?numberOfResult=10&pagenumber=1&filterByUpdateDate=2021/01/30-2022/01/05",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization:
-          "Bearer Gcj63FQ3yW0r(nMfyXTAnR)DP2TZlmeNiTIWnamyKcfWWSI7lB2dLRpw1iS6dd6jAaTlE1eXwYFItfXLK6TeEOm=====2",
-        "Accept-Language": "TH",
-      },
-    })
-      .then((res) => setEventData(res.data.result))
-      .catch((error) => console.error(error));
+    getEventList(setEventData);
   }, []);
+
   const params = {
     navigation: {
       nextEl: ".swiper-event-button-next",
       prevEl: ".swiper-event-button-prev",
     },
+    
     slidesPerView: 3,
     lazy: true,
     spaceBetween: 10,
@@ -37,7 +29,8 @@ const HomeEventSlider = () => {
     watchSlidesProgress: true,
     direction:'horizontal',
     mousewheel:true,
-    
+    loop:true,
+    slidesPerGroup:1
   };
 
   return (

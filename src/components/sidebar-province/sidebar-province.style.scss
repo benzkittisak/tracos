@@ -1,0 +1,13 @@
+.sidebar-province-list {
+  position: relative;
+  display: block;
+
+  select {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #e3e3e3;
+    margin: 5px 0 15px;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,75 @@
+.sidebar-widget {
+  margin: 20px 0px 40px 0px;
+  display: block;
+
+  h4.sidebar-title {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+  }
+  .sidebar-category-list {
+    ul {
+      padding: 0;
+      margin: 5px 0 15px;
+
+      li {
+        position: relative;
+        align-items: center;
+        padding: 0 0 10px;
+
+        &:last-child {
+          padding: 0;
+        }
+
+        .sidebar-category-list-left {
+          .checkMark {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.2s all ease-in-out;
+            background-color: white;
+            border: 1px solid #dce5eb;
+            border-radius: 5px;
+
+            &::after{
+              position: absolute;
+              font-family: "Font Awesome 5 Pro";
+              font-size: 10px;
+              color: white;
+              transform: translate(-50%,-50%);
+              content: '\f00c';
+              top: 50%;
+              left: 50%;
+              opacity: 0;
+            }
+          }
+
+          button {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 0 0 0 30px;
+            text-align: left;
+            border: none;
+            background: none;
+            &.active {
+              & > .checkMark {
+                border-color: $theme-color;
+                background-color: $theme-color;
+
+                &::after{
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
