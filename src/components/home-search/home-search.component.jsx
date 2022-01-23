@@ -19,7 +19,7 @@ const HomeSearch = () => {
   };
   return (
     <div className="home-search-area">
-      <form className="row">
+      <form action="/travel" className="row">
         <div className="col-md-3 col-lg-3">
           <label className="home-search-label" htmlFor="provinceName">
             จังหวัด
@@ -67,6 +67,8 @@ const HomeSearch = () => {
             value={keyword}
             placeholder="พิมพ์คำค้น"
           />
+
+          <input type="hidden" name="search"  />
         </div>
         <div className="col-md-2 col-lg-2 offset-md-1">
           <button className="home-search-btn" type="submit">

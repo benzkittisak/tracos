@@ -11,6 +11,7 @@ import "./search.style.scss";
 const SearchPage = () => {
   const location = useLocation().search;
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const searchParam = new URLSearchParams(location).get("search");
   const keywordParam = new URLSearchParams(location).get("keyword");
@@ -29,6 +30,7 @@ const SearchPage = () => {
       province = provinceParam;
     }
     setData(getPlaceSearch(setData, searchParam, keyword, province));
+    setIsLoading(false);
   }, [searchParam, keywordParam, provinceParam]);
 
   return (
@@ -39,7 +41,7 @@ const SearchPage = () => {
             <SearchSidebar params={searchParam} />
           </div>
           <div className="col-lg-9">
-           <PlaceGrid data={data}/>
+            { isLoading ? <h2>Loading</h2> : <PlaceGrid data={data} />}
           </div>
         </div>
       </div>

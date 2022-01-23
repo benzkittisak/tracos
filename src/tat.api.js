@@ -59,3 +59,25 @@ export const getPlaceSearch = (
 
   return [];
 };
+
+
+export const getAccommodationDetail = (setData , placeType ,  placeID) => {
+  let api = axios({
+    method: "GET",
+    url: `https://tatapi.tourismthailand.org/tatapi/v5/${placeType}/${placeID}`,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization:
+        "Bearer Gcj63FQ3yW0r(nMfyXTAnR)DP2TZlmeNiTIWnamyKcfWWSI7lB2dLRpw1iS6dd6jAaTlE1eXwYFItfXLK6TeEOm=====2",
+      "Accept-Language": "TH",
+    },
+  });
+
+  api
+    .then((res) => {
+      return setData(res.data.result);
+    })
+    .catch((error) => console.log(error));
+
+  return [];
+}

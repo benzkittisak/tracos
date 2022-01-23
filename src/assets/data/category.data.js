@@ -25,7 +25,7 @@ const CATEGORY_DATA = [
         icon:'fad fa-bed-alt',
         name:'โรงแรม',
         cate_code:'ACCOMMODATION',
-        url:'accommondation'
+        url:'accommodation'
     },
     {
         id:5,

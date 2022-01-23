@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 // Page
 import HomePage from "./pages/home/home.component";
 import SearchPage from "./pages/search/search.component";
-
+import PlacePage from "./pages/place/place.component";
 
 // Components
 import Header from "./components/header/header.component";
@@ -20,6 +20,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/travel/*" element={<SearchPage/>} />
+        <Route path ="/:placeType/:placeID" element={<PlacePage />}/>
       </Routes>
       <Footer />
     </Fragment>
