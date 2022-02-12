@@ -23,17 +23,17 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/attraction"}>
+                    <Link to={process.env.PUBLIC_URL + "/travel?search=attraction"}>
                       สถานที่ท่องเที่ยว
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/restaurant"}>
+                    <Link to={process.env.PUBLIC_URL + "/travel?search=restaurant"}>
                       ร้านอาหาร
                     </Link>
                   </li>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/shopping"}>
+                    <Link to={process.env.PUBLIC_URL + "/travel?search=shop"}>
                       ร้านค้า
                     </Link>
                   </li>

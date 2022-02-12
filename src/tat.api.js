@@ -81,3 +81,45 @@ export const getAccommodationDetail = (setData , placeType ,  placeID) => {
 
   return [];
 }
+
+export const getEventDetali = (setData ,  eventID) => {
+  let api = axios({
+    method: "GET",
+    url: `https://tatapi.tourismthailand.org/tatapi/v5/events/${eventID}`,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization:
+        "Bearer Gcj63FQ3yW0r(nMfyXTAnR)DP2TZlmeNiTIWnamyKcfWWSI7lB2dLRpw1iS6dd6jAaTlE1eXwYFItfXLK6TeEOm=====2",
+      "Accept-Language": "TH",
+    },
+  });
+
+  api
+    .then((res) => {
+      return setData(res.data.result);
+    })
+    .catch((error) => console.log(error));
+
+  return [];
+}
+
+export const getRouteDetail = (setData ,  routeID) => {
+  let api = axios({
+    method: "GET",
+    url: `https://tatapi.tourismthailand.org/tatapi/v5/routes/${routeID}`,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization:
+        "Bearer Gcj63FQ3yW0r(nMfyXTAnR)DP2TZlmeNiTIWnamyKcfWWSI7lB2dLRpw1iS6dd6jAaTlE1eXwYFItfXLK6TeEOm=====2",
+      "Accept-Language": "TH",
+    },
+  });
+
+  api
+    .then((res) => {
+      return setData(res.data.result);
+    })
+    .catch((error) => console.log(error));
+
+  return [];
+}

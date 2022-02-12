@@ -5,6 +5,8 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home/home.component";
 import SearchPage from "./pages/search/search.component";
 import PlacePage from "./pages/place/place.component";
+import EventPage from "./pages/event/event.component";
+import TripPage from "./pages/trip/trip.component";
 
 // Components
 import Header from "./components/header/header.component";
@@ -21,6 +23,7 @@ const App = () => {
         <Route exact path="/" element={<HomePage />} />
         <Route path="/travel/*" element={<SearchPage/>} />
         <Route path ="/:placeType/:placeID" element={<PlacePage />}/>
+        <Route exact path="/route/:routeID" element={<TripPage/>}/>
       </Routes>
       <Footer />
     </Fragment>
