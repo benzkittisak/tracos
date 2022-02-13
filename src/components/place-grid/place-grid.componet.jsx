@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const PlaceGrid = ({ data }) => {
   return (
     <div className="row">
-      {data.map(
+      {data.length > 0 ? data.map(
         ({
           place_id,
           place_name,
@@ -53,7 +53,7 @@ const PlaceGrid = ({ data }) => {
             </div>
           </div>
         )
-      )}
+      ) : <h2 className="search-notfound">ไม่พบข้อมูล</h2>}
     </div>
   );
 };

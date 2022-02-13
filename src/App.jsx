@@ -24,6 +24,7 @@ const App = () => {
         <Route path="/travel/*" element={<SearchPage/>} />
         <Route path ="/:placeType/:placeID" element={<PlacePage />}/>
         <Route exact path="/route/:routeID" element={<TripPage/>}/>
+        <Route path ="/event/:eventID" element={<EventPage/>} />
       </Routes>
       <Footer />
     </Fragment>

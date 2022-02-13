@@ -16,9 +16,10 @@ const EventPage = () => {
     let fetchData = getEventDetali(setData, params.eventID);
     setData(fetchData);
 
+    
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 1200);
   }, []);
 
   return (
@@ -31,9 +32,9 @@ const EventPage = () => {
             <div className="row">
               <div className="col-lg-6">
                 <div className="event-section-image">
-                  {data.web_picture_urls.map((image, index) => (
-                    <img src={image} alt="web_image" key={index}></img>
-                  ))}
+                  {data.web_picture_urls ? data.web_picture_urls.map((image, index) => (
+                    <img src={image} alt="web_image" key={index} />
+                  )) : <img src="https://i3.fpic.cc/file/img-b1/2022/02/13/LazyDev-Icon.png" alt=""/>}
                 </div>
               </div>
               <div className="col-lg-6">

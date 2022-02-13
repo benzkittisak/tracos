@@ -33,6 +33,8 @@ const SearchPage = () => {
     setIsLoading(false);
   }, [searchParam, keywordParam, provinceParam]);
 
+
+ 
   return (
     <div className="search-page py-5">
       <div className="container">
