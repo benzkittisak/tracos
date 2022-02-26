@@ -28,13 +28,13 @@ const PlaceHeader = ({ images }) => {
     <div className="row">
       <div className="col-lg-2 d-flex">
         <Swiper {...sliderThumbnailOption} className="position-relative">
-          {images.map((data, index) => (
+          {images ? images.map((data, index) => (
             <SwiperSlide key={index}>
               <div className="detail-second-slider-image">
                 <img src={data} alt="" />
               </div>
             </SwiperSlide>
-          ))}
+          )) : null}
         </Swiper>
       </div>
       <div className="col-lg-10">
@@ -51,13 +51,13 @@ const PlaceHeader = ({ images }) => {
               </span>
             </div>
           </div>
-          {images.map((data, index) => (
+          {images ? images.map((data, index) => (
             <SwiperSlide key={index}>
               <div className="detail-header-image">
                 <img src={data} alt="" />
               </div>
             </SwiperSlide>
-          ))}
+          )) : null}
         </Swiper>
       </div>
     </div>
